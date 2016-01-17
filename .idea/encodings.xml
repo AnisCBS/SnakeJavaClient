@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/GUI/Background1.jpg" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/GUI/Creategame.jpg" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/GUI/Deletegame.jpg" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/GUI/Highscores.jpg" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/GUI/Mainmenu.jpg" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/GUI/Startgame.jpg" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/GUI/login.jpg" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/GUI/start-game.jpg" charset="windows-1252" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
