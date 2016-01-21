@@ -8,5 +8,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jax-rs-jersey-1.10" level="project" />
+    <orderEntry type="library" name="gson-2.2.2 (2)" level="project" />
+    <orderEntry type="library" name="json-simple" level="project" />
+    <orderEntry type="library" name="jgoodies-common" level="project" />
   </component>
 </module>

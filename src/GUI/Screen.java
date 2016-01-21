@@ -80,7 +80,7 @@ public class Screen extends JFrame {
         return login;
     }
 
-    public MainMenu getSnakemenu() {
+    public MainMenu getMainmenu() {
         return mainmenu;
     }
 

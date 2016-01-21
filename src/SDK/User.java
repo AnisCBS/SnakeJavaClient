@@ -1,7 +1,12 @@
 package SDK;
 
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import java.sql.Date;
+import java.util.ArrayList;
+
 /**
  * Created by Waseem on 18/01/16.
  */
@@ -17,11 +22,22 @@ public class User {
     private String email;
     private int type;
 
-    private static ServerConnection serverCon;
+    private static ServerConnection serverConnection;
 
     public User() {
 
-        serverCon = new ServerConnection();
+        serverConnection = new ServerConnection();
+
+    }
+
+    public static ArrayList<User> getUsers() {
+        String jsonImport = serverConnection.get("users");
+        ArrayList<User> users = new Gson().fromJson(jsonImport, new TypeToken<ArrayList<User>>() {
+        }.getType());
+
+        return users;
+
+
     }
     public int getId() {
         return id;

@@ -1,5 +1,9 @@
 package SDK;
 
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.WebResource;
+
 /**
  * Created by Waseem on 18/01/16.
  */
@@ -31,6 +35,18 @@ public class ServerConnection {
         return port;
     }
 
+    public String post(String json, String path) {
+
+        Client client = Client.create();
+
+        WebResource webResource = client.resource(getHostAddress() + ":" + getPort() + "/api/" + path);
+        ClientResponse response = webResource.type("application/json").post(ClientResponse.class, json);
+
+        String output = response.getEntity(String.class);
+        System.out.println(output);
+
+        return output;
+    }
 
     }
 

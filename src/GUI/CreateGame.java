@@ -8,6 +8,7 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.Image;
+import java.awt.event.ActionListener;
 
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -92,6 +93,12 @@ public class CreateGame extends JPanel {
         cbs.setBounds(0,0,450,550);
         add(cbs);
 
+    }
+
+    public void addActionListener(ActionListener l) {
+
+        btnCreateGame.addActionListener(l);
+        btnBack.addActionListener(l);
     }
 
 }

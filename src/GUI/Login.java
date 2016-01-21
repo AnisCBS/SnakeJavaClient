@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.event.ActionListener;
 
 
 /**
@@ -63,6 +64,17 @@ public class Login extends JPanel {
         cbs.setBounds(0,0,450,550);
         add(cbs);
 
+    }
+    public void actionPerformedLogin(ActionListener login) {
+        btnLogin.addActionListener(login);
+    }
+
+    public JTextField getPlayerID() {
+        return PlayerID;
+    }
+
+    public JTextField getPasswordfield() {
+        return passwordField;
     }
 
 

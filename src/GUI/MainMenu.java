@@ -1,11 +1,15 @@
 package GUI;
 
+import SDK.User;
+
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 
 import java.awt.*;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 
 /**
@@ -57,6 +61,17 @@ public class MainMenu extends JPanel {
         cbs.setIcon( new ImageIcon(src));
         cbs.setBounds(0,0,450,550);
         this.add(cbs);
+    }
+
+    public void setUsers(ArrayList<User> users){
+
+    }
+    public void addACList(ActionListener ac){
+        btnStartNewGame.addActionListener(ac);
+        btnCreateGame.addActionListener(ac);
+        btnDeleteGame.addActionListener(ac);
+        btnLoadHighscores.addActionListener(ac);
+        btnLogOut.addActionListener(ac);
     }
 
 
