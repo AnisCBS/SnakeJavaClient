@@ -3,6 +3,7 @@ package GUI;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -58,6 +59,18 @@ public class DeleteGame extends JPanel {
         cbs.setIcon( new ImageIcon(src));
         cbs.setBounds(0,0,450,550);
         add(cbs);
+    }
+
+    public void clearFields() {
+        textField.setText("");
+    }
+
+    public void actionPerformedDeleteGame(ActionListener deletegame) {
+        btnDeleteGame.addActionListener(deletegame);
+    }
+
+    public void actionPerformedBack(ActionListener back) {
+        btnBack.addActionListener(back);
     }
 
 
