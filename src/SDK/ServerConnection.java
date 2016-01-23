@@ -60,6 +60,29 @@ public class ServerConnection {
         return output;
     }
 
+    public String delete( String path) {
+
+        Client client = Client.create();
+        System.out.println(getHostAddress() + ":" + getPort() + "/api/" + path);
+        WebResource webResource = client.resource(getHostAddress() + ":" + getPort() + "/api/" + path);
+        ClientResponse response = webResource.type("application/json").delete(ClientResponse.class);
+
+        return response.getEntity(String.class);
+    }
+
+    public String put(String path, String json) {
+
+
+        Client client = Client.create();
+        System.out.println(getHostAddress() + ":" + getPort() + "/api/" + path);
+        WebResource webResource = client.resource(getHostAddress() + ":" + getPort() + "/api/" + path);
+        ClientResponse response = webResource.type("application/json").put(ClientResponse.class, json);
+
+        String output = response.getEntity(String.class);
+
+        return output;
+    }
+
 
 }
 
