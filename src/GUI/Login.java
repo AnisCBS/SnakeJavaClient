@@ -78,4 +78,8 @@ public class Login extends JPanel {
     }
 
 
+    public void clearFields() {
+        PlayerID.setText("");
+        passwordField.setText("");
+    }
 }
