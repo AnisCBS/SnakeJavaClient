@@ -95,10 +95,26 @@ public class CreateGame extends JPanel {
 
     }
 
-    public void addActionListener(ActionListener l) {
-
-        btnCreateGame.addActionListener(l);
-        btnBack.addActionListener(l);
+    public void clearFields(){
+        textField_gameName.setText("");
+        textField_gameControl.setText("");
+        
+        
+    }
+    
+    public void actionPerformedCreateGame(ActionListener creategame) {
+        btnCreateGame.addActionListener(creategame);
     }
 
+    public void actionPerformedBack(ActionListener back) {
+        btnBack.addActionListener(back);
+    }
+
+    public JTextField getTextField_gameControl() {
+        return textField_gameControl;
+    }
+
+    public JTextField getTextField_gameName() {
+        return textField_gameName;
+    }
 }

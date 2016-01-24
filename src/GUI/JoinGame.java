@@ -3,6 +3,7 @@ package GUI;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.event.ActionListener;
 
 
 import javax.swing.ImageIcon;
@@ -66,6 +67,28 @@ public class JoinGame extends JPanel {
         add(cbs);
 
     }
+    
+    public void clearFields() {
+        textField_gameId.setText("");
+        textfield_gameControl.setText("");
 
+    }
 
+     public void actionPerformedJoinGame(ActionListener joingame) {
+          btnStartGame.addActionListener(joingame);
+
+     }
+
+     public void actionPerformedBack(ActionListener back) {
+          btnBack.addActionListener(back);
+     }
+
+    public JTextField getTextfield_gameControl() {
+        return textfield_gameControl;
+    }
+
+    public JTextField getTextField_gameId() {
+        return textField_gameId;
+    }
 }
+
