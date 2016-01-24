@@ -3,6 +3,7 @@ package GUI;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.event.ActionListener;
 
 
 import javax.swing.ImageIcon;
@@ -39,7 +40,12 @@ public class Highscores extends JPanel {
 
     }
 
+    public void actionPerformedHighScores(ActionListener highscores) {
 
+    }
 
+    public void actionPerformedBack(ActionListener back) {
+        btnBack.addActionListener(back);
+    }
 
 }
