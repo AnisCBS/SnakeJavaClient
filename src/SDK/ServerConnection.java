@@ -12,8 +12,8 @@ public class ServerConnection {
     public ServerConnection() {
 
 
-        this.hostAddress = "http://localhost";
-        this.port = 9876;
+        this.hostAddress = "http://snake-server.herokuapp.com";
+        this.port = 80;
     }
 
     private String hostAddress;
@@ -58,6 +58,7 @@ public class ServerConnection {
         String output = response.getEntity(String.class);
         System.out.println(output);
         return output;
+
     }
 
     public String delete( String path) {
