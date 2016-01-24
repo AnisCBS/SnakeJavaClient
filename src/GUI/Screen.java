@@ -34,7 +34,7 @@ public class Screen extends JFrame {
         setResizable(false);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 480, 610);
+        setBounds(100, 100, 930, 610);
 
         contentPane = new JPanel();
         setContentPane(contentPane);
