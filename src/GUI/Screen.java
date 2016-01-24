@@ -43,8 +43,8 @@ public class Screen extends JFrame {
 
         mainMenu = new JPanel();
         mainMenu.setBounds(10, 10, 450, 550);
-        contentPane.add(mainMenu); // Tilføj til container
-        mainMenu.setLayout(new CardLayout()); // Tilføjer e
+        contentPane.add(mainMenu);
+        mainMenu.setLayout(new CardLayout());
 
         login = new Login();
         mainMenu.add(login, LOGIN);
@@ -63,6 +63,26 @@ public class Screen extends JFrame {
 
         highscores = new Highscores();
         mainMenu.add(highscores, HIGHSCORES);
+
+        status = new JPanel();
+        status.setBounds(485, 10, 415, 550);
+        status.setBackground(new Color(169, 169, 169));
+        contentPane.add(status);
+        status.setLayout(null);
+
+        lblStatusMessages = new JLabel("Status Messages:");
+        lblStatusMessages.setForeground(new Color(0, 0, 102));
+        lblStatusMessages.setFont(new Font("Tahoma", Font.BOLD, 18));
+        lblStatusMessages.setVerticalAlignment(SwingConstants.TOP);
+        lblStatusMessages.setBounds(10, 11, 161, 22);
+        status.add(lblStatusMessages);
+
+        textArea = new JTextArea();
+        textArea.setBounds(10, 44, 395, 495);
+        textArea.setLineWrap(true);
+        textArea.setText("Extra: ");
+        status.add(textArea);
+        textArea.setEditable(false);
 
     }
     public void clearFields(){
@@ -84,7 +104,7 @@ public class Screen extends JFrame {
         return mainmenu;
     }
 
-    public JoinGame getStartgame() {
+    public JoinGame getJoingame() {
         return joingame;
     }
 
@@ -96,9 +116,12 @@ public class Screen extends JFrame {
         return deletegame;
     }
 
-    public Highscores getHighscores() {return highscores;}
+    public Highscores Highscores() {return highscores;}
 
 
     public void run() {
+    }
+    public void addStatusWindowMessage(String msg){
+        textArea.setText(textArea.getText() + "\n" + msg);
     }
 }
