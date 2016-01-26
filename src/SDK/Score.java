@@ -5,6 +5,10 @@ package SDK;
  */
 public class Score {
 
+    /**
+     * Declaration of local variables.
+     */
+
     private int id;
     private Gamer user;
     private Gamer opponent;
@@ -21,6 +25,10 @@ public class Score {
     }
 
     public Score(){}
+
+    /**
+     * Getters and setters for all the variables for Score.
+     */
 
     public Gamer getOpponent() { return opponent; }
 

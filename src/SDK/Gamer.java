@@ -5,11 +5,19 @@ package SDK;
  */
 public class Gamer extends User {
 
+    /**
+     * Declaration of local variables.
+     */
+
     private int score;
     private int totalScore;
     private int kills;
     private String controls;
     private boolean winner;
+
+    /**
+     * Getters and setters for all the variables for Gamer.
+     */
 
     public boolean isWinner() {
         return winner;

@@ -7,6 +7,10 @@ import java.sql.Date;
  */
 public class Game {
 
+    /**
+     * Declaration of local variables.
+     */
+
     private int gameId;
     private Gamer winner;
     private String name;
@@ -17,6 +21,10 @@ public class Game {
     private int mapSize;
 
     public Game(){}
+
+    /**
+     * Getters and setters for all the variables for Game.
+     */
 
     public Date getCreated() {
         return created;

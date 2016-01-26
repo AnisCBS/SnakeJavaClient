@@ -12,6 +12,10 @@ import java.util.ArrayList;
  */
 public class User {
 
+    /**
+     * Declaration of local variables.
+     */
+
     private int id;
     private String firstName;
     private String lastName;
@@ -23,6 +27,10 @@ public class User {
     private int type;
 
     private static ServerConnection serverConnection;
+
+    /**
+     * An ArrayList for all the users in the system.
+     */
 
     public User() {
 
@@ -37,7 +45,9 @@ public class User {
 
         return users;
 
-
+        /**
+         * Getters and setters for all the variables for User.
+         */
     }
     public int getId() {
         return id;
