@@ -304,7 +304,6 @@ public class Controller {
             /**
              * Prints response from server to status panel.
              */
-
             screen.addStatusWindowMessage("Spillet er nu slettet: " + parseMessage(jsonGameData));
             screen.getDeletegame().clearFields();
         }
