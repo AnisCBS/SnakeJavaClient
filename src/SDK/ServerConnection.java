@@ -7,17 +7,36 @@ import com.sun.jersey.api.client.WebResource;
 /**
  * Created by Waseem on 18/01/16.
  */
+
+/**
+ * This class creates the connection to the server as well as the attributes that makes the server execute actions.
+ */
 public class ServerConnection {
+
+    /**
+     * Creates constructor.
+     */
 
     public ServerConnection() {
 
+        /**
+         * Initialise variables from constructor.
+         */
 
         this.hostAddress = "http://snake-server.herokuapp.com";
         this.port = 80;
     }
 
+    /**
+     * Declaration of local variables.
+     */
+
     private String hostAddress;
     private int port;
+
+    /**
+     * Setters are created.
+     */
 
     public void setHostAddress(String hostAddress) {
         this.hostAddress = hostAddress;
@@ -35,6 +54,11 @@ public class ServerConnection {
         return port;
     }
 
+    /**
+     * Method is used to POST to the server.
+     * Path is the directory to which we will POST to the server.
+     */
+
     public String post(String json, String path) {
 
         Client client = Client.create();
@@ -47,6 +71,11 @@ public class ServerConnection {
 
         return output;
     }
+
+     /**
+     * Method is used to GET from the server.
+     * path is the directory from which we want to GET something
+     */
 
     public String get(String path) {
 
@@ -61,6 +90,11 @@ public class ServerConnection {
 
     }
 
+    /**
+     * Method is used to DELETE something from the server.
+     * path is the directory from which we want to DELETE something
+     */
+
     public String delete( String path) {
 
         Client client = Client.create();
@@ -70,6 +104,11 @@ public class ServerConnection {
 
         return response.getEntity(String.class);
     }
+
+    /**
+     * Method is used to PUT / update to the server.
+     * path is the directory from which we want to PUT / update something
+     */
 
     public String put(String path, String json) {
 
