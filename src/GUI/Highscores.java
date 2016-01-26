@@ -16,8 +16,18 @@ import javax.swing.JTable;
  * Created by Waseem on 17-01-2016.
  */
 public class Highscores extends JPanel {
+
+    /**
+     * Declaration of local variables.
+     */
+
     private JTable table;
     private JButton btnBack;
+
+    /**
+     * Creation of the panel "HighscoresMenu" that gets added to the different components.
+     */
+
     public Highscores() {
         setLayout(null);
         setBounds(100, 100, 450, 550);
@@ -32,6 +42,10 @@ public class Highscores extends JPanel {
         btnBack.setFont(new Font("Calibri", Font.BOLD, 22));
         btnBack.setBounds(86, 448, 277, 41);
         add(btnBack);
+
+        /**
+         * Adds a background image to the panel.
+         */
 
         JLabel cbs = new JLabel(""); Image src = new ImageIcon(this.getClass().getResource("Highscores.jpg")).getImage();
         cbs.setIcon( new ImageIcon(src));

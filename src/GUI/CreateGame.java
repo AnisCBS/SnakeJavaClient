@@ -16,7 +16,20 @@ import javax.swing.JButton;
 /**
  * Created by Waseem on 17-01-2016.
  */
+
+/**
+ * This is the GUI class for the screen "CreateGame". The class consists of the GUI, getters and actionListeners.
+ */
+
+/**
+ * Using an "extended" JPanel making it possible for a window to include JComponents.
+ */
+
 public class CreateGame extends JPanel {
+
+    /**
+     * Declaration of local variables.
+     */
     private JTextField textField_gameName;
     private JButton btnCreateGame;
     private JButton btnBack;
@@ -28,11 +41,18 @@ public class CreateGame extends JPanel {
     private JButton btnD;
     private JButton btnW;
 
-
     public CreateGame() {
+
+        /**
+         * Setting layout to "null" so it get's defined by the size of the JFrame.
+         */
 
         setLayout(null);
         setBounds(100, 100, 450, 550);
+
+        /**
+         * Adding JTextField.
+         */
 
         textField_gameName = new JTextField();
         textField_gameName.setBounds(238, 203, 166, 34);
@@ -56,12 +76,18 @@ public class CreateGame extends JPanel {
         lblNewGame.setBounds(86, 378, 277, 50);
         add(lblNewGame);
 
+        /**
+         * Adding JTextField.
+         */
 
         textField_gameControl = new JTextField();
         textField_gameControl.setBounds(238, 248, 166, 34);
         add(textField_gameControl);
         textField_gameControl.setColumns(10);
 
+        /**
+         * Adding JButton.
+         */
 
         btnA = new JButton("A = Left");
         btnA.setForeground(new Color(0, 128, 128));
@@ -69,6 +95,9 @@ public class CreateGame extends JPanel {
         btnA.setBounds(86, 341, 79, 23);
         add(btnA);
 
+        /**
+         * Adding JButton.
+         */
 
         btnW = new JButton("W = Up");
         btnW.setFont(new Font("Calibri", Font.BOLD, 14));
@@ -76,11 +105,19 @@ public class CreateGame extends JPanel {
         btnW.setBounds(175, 313, 89, 23);
         add(btnW);
 
+        /**
+         * Adding JButton.
+         */
+
         btnS = new JButton("S = Down");
         btnS.setForeground(new Color(0, 128, 128));
         btnS.setFont(new Font("Calibri", Font.BOLD, 14));
         btnS.setBounds(175, 341, 89, 23);
         add(btnS);
+
+        /**
+         * Adding JButton.
+         */
 
         btnD = new JButton("D = Right");
         btnD.setForeground(new Color(0, 128, 128));
@@ -88,12 +125,20 @@ public class CreateGame extends JPanel {
         btnD.setBounds(274, 341, 89, 23);
         add(btnD);
 
+        /**
+         * Adds a background image to the panel.
+         */
+
         JLabel cbs = new JLabel(""); Image src = new ImageIcon(this.getClass().getResource("Creategame.jpg")).getImage();
         cbs.setIcon( new ImageIcon(src));
         cbs.setBounds(0,0,450,550);
         add(cbs);
 
     }
+
+    /**
+     * ActionListeners for "CreateGame" and "Back" buttons.
+     */
 
     public void clearFields(){
         textField_gameName.setText("");

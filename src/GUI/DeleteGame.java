@@ -15,6 +15,11 @@ import javax.swing.JTextField;
  * Created by Waseem on 17-01-2016.
  */
 public class DeleteGame extends JPanel {
+
+    /**
+     * Declaration of local variables.
+     */
+
     private JTextField textField;
     private JButton btnDeleteGame;
     private JButton btnBack;
@@ -54,6 +59,10 @@ public class DeleteGame extends JPanel {
         lblGameDeleted = new JLabel("");
         lblGameDeleted.setBounds(86, 378, 277, 50);
         add(lblGameDeleted);
+
+        /**
+         * Adds a background image to the panel.
+         */
 
         JLabel cbs = new JLabel(""); Image src = new ImageIcon(this.getClass().getResource("Deletegame.jpg")).getImage();
         cbs.setIcon( new ImageIcon(src));
